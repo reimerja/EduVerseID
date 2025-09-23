@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduVerse - Solusi Belajar Bahasa Inggris</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-container">
+            <div class="loading-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <h2>EduVerse</h2>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p class="loading-text">Loading...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>EduVerse</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Beranda</a></li>
+                <li><a href="#materi" class="nav-link">Materi</a></li>
+                <li><a href="#latihan" class="nav-link">Latihan</a></li>
+                <li><a href="#tentang" class="nav-link">Tentang</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Tingkatkan <span class="highlight">Skill Bahasa Inggris</span> 
+                    Anda dengan EduVerse
+                </h1>
+                <p class="hero-description">
+                    Platform pembelajaran bahasa Inggris terdepan yang dirancang khusus 
+                    untuk meningkatkan kemampuan siswa dengan materi interaktif dan latihan 
+                    soal yang komprehensif.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="scrollToSection('materi')">
+                        <i class="fas fa-book"></i>
+                        Mulai Belajar
+                    </button>
+                    <button class="btn-secondary" onclick="scrollToSection('latihan')">
+                        <i class="fas fa-pencil-alt"></i>
+                        Latihan Soal
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-cards">
+                    <div class="card card-1">
+                        <i class="fas fa-language"></i>
+                        <span>Grammar</span>
+                    </div>
+                    <div class="card card-2">
+                        <i class="fas fa-book-open"></i>
+                        <span>Reading</span>
+                    </div>
+                    <div class="card card-3">
+                        <i class="fas fa-microphone"></i>
+                        <span>Speaking</span>
+                    </div>
+                    <div class="card card-4">
+                        <i class="fas fa-headphones"></i>
+                        <span>Listening</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Mengapa Memilih EduVerse?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Materi Komprehensif</h3>
+                    <p>Kurikulum lengkap dari dasar hingga advanced dengan penjelasan yang mudah dipahami</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Latihan Interaktif</h3>
+                    <p>Ribuan soal latihan dengan feedback langsung untuk mempercepat proses belajar</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Progress Tracking</h3>
+                    <p>Pantau perkembangan belajar Anda dengan sistem tracking yang detail</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Akses Dimana Saja</h3>
+                    <p>Belajar kapan saja dan dimana saja dengan platform yang responsive</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Materi Section -->
+    <section id="materi" class="materi">
+        <div class="container">
+            <h2 class="section-title">Materi Pembelajaran</h2>
+            <div class="materi-tabs">
+                <button class="tab-btn active" data-tab="grammar">Grammar</button>
+                <button class="tab-btn" data-tab="vocabulary">Vocabulary</button>
+                <button class="tab-btn" data-tab="reading">Reading</button>
+                <button class="tab-btn" data-tab="listening">Listening</button>
+            </div>
+            
+            <div class="tab-content">
+                <!-- Grammar Tab -->
+                <div class="tab-pane active" id="grammar">
+                    <div class="materi-grid">
+                        <div class="materi-card">
+                            <div class="materi-icon">
+                                <i class="fas fa-question-circle"></i>
+                            </div>
+                            <h3>Tenses</h3>
+                            <p>Pelajari 12 tenses dalam bahasa Inggris dengan penjelasan lengkap dan contoh</p>
+                            <button class="btn-materi" onclick="openMateriModal('tenses')">Pelajari</button>
+                        </div>
+                        <div class="materi-card">
+                            <div class="materi-icon">
+                                <i class="fas fa-sitemap"></i>
+                            </div>
+                            <h3>Parts of Speech</h3>
+                            <p>Memahami noun, verb, adjective, adverb dan part of speech lainnya</p>
+                            <button class="btn-materi" onclick="openMateriModal('parts-of-speech')">Pelajari</button>
+                        </div>
+                        <div class="materi-card">
+                            <div class="materi-icon">
+                                <i class="fas fa-link"></i>
+                            </div>
+                            <h3>Conjunctions</h3>
+                            <p>Belajar menghubungkan kata, frasa, dan kalimat dengan konjungsi</p>
+                            <button class="btn-materi" onclick="openMateriModal('conjunctions')">Pelajari</button>
+                        </div>
+                        <div class="materi-card">
+                            <div class="materi-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <h3>Conditional Sentences</h3>
+                            <p>Memahami conditional sentences type 1, 2, dan 3</p>
+                            <button class="btn-materi" onclick="openMateriModal('conditional')">Pelajari</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vocabulary Tab -->
+                <div class="tab-pane" id="vocabulary">
+                    <div class="materi-grid">
+                        <div class="materi-card">
+                            <div class="materi-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <h3>Daily Vocabulary</h3>
+                            <p>Kosakata sehari-hari yang sering digunakan dalam percakapan</p>
+                            <button class="btn-materi" onclick="openMateriModal('daily-vocab')">Pelajari</button>
+                        </div>
+                        <div class="materi-card">
+                            <div class="materi-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <h3>Business English</h3>
+                            <p>Kosakata dan frasa untuk dunia bisnis dan profesional</p>
+                            <button class="btn-materi" onclick="openMateriModal('business-english')">Pelajari</button>
+                        </div>
+                        <div class="materi-card">
+                            <div class="materi-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3>Academic Vocabulary</h3>
+                            <p>Kosakata akademik untuk keperluan pendidikan dan penelitian</p>
+                            <button class="btn-materi" onclick="openMateriModal('academic-vocab')">Pelajari</button>
+                        </div>
+                        <div class="materi-card">
+                            <div class="materi-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3>Idioms & Phrases</h3>
+                            <p>Belajar idiom dan frasa bahasa Inggris yang umum digunakan</p>
+                            <button class="btn-materi" onclick="openMateriModal('idioms')">Pelajari</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reading Tab -->
+                <div class="tab-pane" id="reading">
+                    <div class="materi-grid">
+                        <div class="materi-card">
+                            <div class="materi-icon">
+                                <i class="fas fa-newspaper"></i>
+                            </div>
+                            <h3>News Articles</h3>
+                            <p>Artikel berita terkini untuk meningkatkan reading comprehension</p>
+                            <button class="btn-materi" onclick="openMateriModal('news-articles')">Pelajari</button>
+                        </div>
+                        <div class="materi-card">
+                            <div class="materi-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <h3>Short Stories</h3>
+                            <p>Cerita pendek menarik untuk melatih kemampuan membaca</p>
+                            <button class="btn-materi" onclick="openMateriModal('short-stories')">Pelajari</button>
+                        </div>
+                        <div class="materi-card">
+                            <div class="materi-icon">
+                                <i class="fas fa-microscope"></i>
+                            </div>
+                            <h3>Scientific Texts</h3>
+                            <p>Teks ilmiah untuk meningkatkan vocabulary dan comprehension</p>
+                            <button class="btn-materi" onclick="openMateriModal('scientific-texts')">Pelajari</button>
+                        </div>
+                        <div class="materi-card">
+                            <div class="materi-icon">
+                                <i class="fas fa-history"></i>
+                            </div>
+                            <h3>Historical Texts</h3>
+                            <p>Teks sejarah untuk memahami konteks dan budaya</p>
+                            <button class="btn-materi" onclick="openMateriModal('historical-texts')">Pelajari</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Listening Tab -->
+                <div class="tab-pane" id="listening">
+                    <div class="materi-grid">
+                        <div class="materi-card">
+                            <div class="materi-icon">
+                                <i class="fas fa-podcast"></i>
+                            </div>
+                            <h3>Podcasts</h3>
+                            <p>Podcast interaktif dengan berbagai topik menarik</p>
+                            <button class="btn-materi" onclick="openMateriModal('podcasts')">Pelajari</button>
+                        </div>
+                        <div class="materi-card">
+                            <div class="materi-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <h3>Video Lessons</h3>
+                            <p>Video pembelajaran dengan subtitle dan transkrip</p>
+                            <button class="btn-materi" onclick="openMateriModal('video-lessons')">Pelajari</button>
+                        </div>
+                        <div class="materi-card">
+                            <div class="materi-icon">
+                                <i class="fas fa-music"></i>
+                            </div>
+                            <h3>Music & Songs</h3>
+                            <p>Belajar melalui lagu-lagu bahasa Inggris populer</p>
+                            <button class="btn-materi" onclick="openMateriModal('music-songs')">Pelajari</button>
+                        </div>
+                        <div class="materi-card">
+                            <div class="materi-icon">
+                                <i class="fas fa-theater-masks"></i>
+                            </div>
+                            <h3>Conversations</h3>
+                            <p>Dialog dan percakapan dalam berbagai situasi</p>
+                            <button class="btn-materi" onclick="openMateriModal('conversations')">Pelajari</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latihan Section -->
+    <section id="latihan" class="latihan">
+        <div class="container">
+            <h2 class="section-title">Latihan Soal</h2>
+            <div class="latihan-categories">
+                <div class="category-card" onclick="startQuiz('grammar')">
+                    <div class="category-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3>Grammar Quiz</h3>
+                    <p>5 soal grammar dengan berbagai tingkat kesulitan</p>
+                    <div class="difficulty">
+                        <span class="difficulty-badge easy">Mudah</span>
+                        <span class="difficulty-badge medium">Sedang</span>
+                        <span class="difficulty-badge hard">Sulit</span>
+                    </div>
+                </div>
+                <div class="category-card" onclick="startQuiz('vocabulary')">
+                    <div class="category-icon">
+                        <i class="fas fa-spell-check"></i>
+                    </div>
+                    <h3>Vocabulary Test</h3>
+                    <p>4 soal vocabulary dengan pilihan ganda</p>
+                    <div class="difficulty">
+                        <span class="difficulty-badge easy">Mudah</span>
+                        <span class="difficulty-badge medium">Sedang</span>
+                    </div>
+                </div>
+                <div class="category-card" onclick="startQuiz('reading')">
+                    <div class="category-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Reading Comprehension</h3>
+                    <p>3 soal reading dengan teks dan pertanyaan</p>
+                    <div class="difficulty">
+                        <span class="difficulty-badge medium">Sedang</span>
+                        <span class="difficulty-badge hard">Sulit</span>
+                    </div>
+                </div>
+                <div class="category-card" onclick="startQuiz('listening')">
+                    <div class="category-icon">
+                        <i class="fas fa-headphones"></i>
+                    </div>
+                    <h3>Listening Test</h3>
+                    <p>2 soal listening dengan audio</p>
+                    <div class="difficulty">
+                        <span class="difficulty-badge easy">Mudah</span>
+                        <span class="difficulty-badge medium">Sedang</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="tentang" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Tentang EduVerse</h2>
+                    <p>
+                        EduVerse adalah platform pembelajaran bahasa Inggris yang dirancang khusus 
+                        untuk mengatasi masalah rendahnya skill bahasa Inggris siswa. Dengan 
+                        pendekatan pembelajaran yang interaktif dan menyenangkan, kami membantu 
+                        siswa meningkatkan kemampuan bahasa Inggris mereka secara efektif.
+                    </p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>1000+</h3>
+                            <p>Soal Latihan</p>
+                        </div>
+                        <div class="stat">
+                            <h3>50+</h3>
+                            <p>Materi Pembelajaran</p>
+                        </div>
+                        <div class="stat">
+                            <h3>95%</h3>
+                            <p>Tingkat Kepuasan</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-users"></i>
+                        <p>Bergabung dengan ribuan siswa yang telah meningkatkan skill bahasa Inggris mereka</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>EduVerse</span>
+                    </div>
+                    <p>Platform pembelajaran bahasa Inggris terdepan untuk meningkatkan skill siswa</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#materi">Materi</a></li>
+                        <li><a href="#latihan">Latihan</a></li>
+                        <li><a href="#tentang">Tentang</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Kontak</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@eduverse.com</li>
+                        <li><i class="fas fa-phone"></i> +62 123 456 7890</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 EduVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Materi Modal -->
+    <div id="materi-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeMateriModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Quiz Modal -->
+    <div id="quiz-modal" class="modal">
+        <div class="modal-content quiz-modal">
+            <span class="close" onclick="closeQuizModal()">&times;</span>
+            <div id="quiz-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
