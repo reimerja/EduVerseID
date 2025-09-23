@@ -205,13 +205,14 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    align-items: center;
-    position: relative;
+    align-items: flex-start; /* Ubah dari 'center' ke 'flex-start' */
+    padding-top: 2rem; /* Tambahkan ini */
     z-index: 1;
 }
 
 .hero-content {
     animation: slideInLeft 1s ease-out;
+    padding-top: 1rem; /* Tambahkan ini */
 }
 
 .hero-title {
@@ -219,6 +220,7 @@ body {
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1.5rem;
+    margin-top: 1rem; /* Tambahkan ini untuk menurunkan posisi */
 }
 
 .highlight {
@@ -1187,4 +1189,5 @@ body {
 ::-moz-selection {
     background: var(--accent-color);
     color: white;
+
 }
